@@ -10,6 +10,7 @@ import java.time.temporal.ChronoUnit;
 
 @Service
 @AllArgsConstructor
+@NoArgsConstructor
 public class ReservationService {
 
     private final ReservationRepository reservationRepository;
