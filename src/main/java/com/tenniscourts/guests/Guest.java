@@ -1,6 +1,8 @@
 package com.tenniscourts.guests;
 
 import com.tenniscourts.config.persistence.BaseEntity;
+import com.tenniscourts.reservations.Reservation;
+import com.tenniscourts.schedules.Schedule;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -28,5 +30,14 @@ public class Guest extends BaseEntity<Long> {
   @Column
   @NotNull
   private String name;
+  
+  @Autowired
+  private Schedule schedule;
+  
+  @Autowired
+  private Reservation reservations;
+  
+  schedule.addReservation(reservations); 
+
 
 }
